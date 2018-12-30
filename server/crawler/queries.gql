@@ -1,0 +1,44 @@
+{
+    genres  {
+      id
+      name
+      audience
+    }
+}
+
+{
+    genreById (id: "1") {
+      id
+      name
+      audience
+    }
+}
+
+{
+    genreByName (name: "ballet") {
+      id
+      name
+      audience
+    }
+}
+
+{
+    performances {
+      id
+      name
+      genreId
+    }
+}
+
+
+{
+	performanceById (id: "2") {
+    name
+    genreId
+    genreById {
+      id
+      name
+    }
+  }
+}
+
